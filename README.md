@@ -47,8 +47,7 @@ React Native 2020:
 
 
 Install Pods(Requires XCode to configure an Iphone/Ipad/Ipod-Classic/Ipod-Shuffle Simulator):
-- cd ios && pod install && cd ...
-
+- cd ios && pod install && cd ..
 
 Run Simulator:
 - react-native run-ios

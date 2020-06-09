@@ -1,0 +1,33 @@
+import React from 'react';
+import { View, Text, Image, ImageSourcePropType } from 'react-native';
+import { shape, string, number } from 'prop-types';
+import styles from 'styles.scss';
+
+const Card = ({ card }) => (
+  <View 
+    activeOpacity={1}
+    style={styles.card}
+  >
+    <Image 
+      style={styles.iamge}
+      source={card.photo}
+      resizeMode="cover"
+     />
+
+     <View style={styles.photoDescriptionContainer}>
+      <Text style={styles.text}>
+        {`${card.name}, ${card.age}`}
+      </Text>
+     </View>
+  </View>
+)
+
+Card.propTypes = {
+  card: shape({
+    photo: ImageSourcePropType,
+    name: string,
+    age: number,
+  }).isRequired,
+}
+
+export default Card;
